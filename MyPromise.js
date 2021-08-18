@@ -1,12 +1,14 @@
 (function (global, factory) {
   "use strict";
-
-  if (typeof module === "object" && typeof module.exports === "object") {
-    module.exports = factory(global);
+  if (typeof define === "function" && define.amd) {
+    // AMD
+    define(factory);
+  } else if (typeof module === "object" && typeof module.exports === "object") {
+    module.exports = factory();
   } else {
-    factory(global);
+    global.MyPromise = factory();
   }
-})(this, function (global) {
+})(this, function () {
   /**
    * 核心逻辑：then方法中将成功回调和失败回调用异步方法包一下之后分别加入一个队列，在resolve/reject方法被调用
    * 后挨个执行队列中的方法
@@ -224,8 +226,6 @@
       resolve(x);
     }
   }
-
-  global.MyPromise = MyPromise;
 
   return MyPromise;
 });
