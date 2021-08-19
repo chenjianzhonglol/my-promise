@@ -1,4 +1,5 @@
-const MyPromise = require("./MyPromise");
+const MyPromise = require("../dist/MyPromise");
+console.log(MyPromise);
 
 // 测试是否满足Promise A+规范
 MyPromise.deferred = () => {

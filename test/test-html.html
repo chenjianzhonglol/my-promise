@@ -7,8 +7,9 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="./MyPromise.js"></script>
+    <script src="../dist/MyPromise.js"></script>
     <script>
+      console.log(window);
       console.log(MyPromise);
       new MyPromise((resolve, reject) => {
         console.log("start");
