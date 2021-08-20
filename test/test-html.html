@@ -7,13 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="../dist/MyPromise.js"></script>
+    <script src="../dist/MyPromise.min.js"></script>
     <script>
       console.log(window);
       console.log(MyPromise);
-      new MyPromise((resolve, reject) => {
+      new MyPromise(function (resolve, reject) {
         console.log("start");
-        setTimeout(() => {
+        setTimeout(function () {
           resolve(3);
         }, 1000);
         // resolve(1);

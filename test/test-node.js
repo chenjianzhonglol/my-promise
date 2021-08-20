@@ -1,4 +1,4 @@
-const MyPromise = require("../dist/MyPromise");
+const MyPromise = require("../dist/MyPromise.min");
 console.log(MyPromise);
 
 // 测试是否满足Promise A+规范

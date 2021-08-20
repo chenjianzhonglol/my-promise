@@ -4,8 +4,8 @@
   "description": "",
   "main": "MyPromise.js",
   "scripts": {
-    "build": "webpack",
-    "analysis": "webpack --config webpack.config.js --profile --json > ./deps.json",
+    "build": "rollup -c --environment NODE_ENV:production && rollup -c",
+    "dev": "rollup -c  --watch",
     "test": "promises-aplus-tests test/test-node"
   },
   "author": "",
@@ -14,7 +14,15 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "babel-loader": "^8.2.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
     "promises-aplus-tests": "^2.1.2",
+    "rollup": "^2.56.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4",
     "webpack": "^5.50.0",
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.8.0"
