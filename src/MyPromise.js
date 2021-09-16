@@ -210,4 +210,10 @@ function resolvePromise(p, x, resolve, reject) {
     resolve(x);
   }
 }
+
+async function tt() {
+  const a = await MyPromise.resolve(1);
+  return a;
+}
+console.log(tt());
 export default MyPromise;
