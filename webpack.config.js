@@ -3,7 +3,7 @@ const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-  // mode: "development",
+  mode: "development",
   entry: {
     MyPromise: {
       import: "./src/MyPromise.js",
